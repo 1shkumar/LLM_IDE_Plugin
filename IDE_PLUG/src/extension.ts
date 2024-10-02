@@ -38,7 +38,6 @@ export function activate(context: vscode.ExtensionContext) {
             
             const model: string = vscode.workspace.getConfiguration().get('llmAssistant.model') || 'gpt2';
 
-            // Check if the model is a valid string
             if (typeof model !== 'string' || model.trim() === '') {
                 vscode.window.showErrorMessage('Invalid model name. Please configure a valid model in the settings.');
                 return;
